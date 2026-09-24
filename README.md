@@ -57,6 +57,16 @@ The repository includes browser-ready geometry. Rebuilding it is optional: obtai
 
 Import this repository into Vercel as a Vite project. The included `vercel.json` configures `npm ci`, `npm run build`, and the `dist` output directory. It can also be served by a static host.
 
+### EasyPanel via GHCR
+
+The GitHub Actions workflow publishes the container image to:
+
+```text
+ghcr.io/rahmatfadhilah22/human-atlas:latest
+```
+
+In EasyPanel, create a Docker Image service with that image and expose container port `80`. Use a commit tag such as `sha-<short-commit>` when a pinned deployment is preferred. If the GHCR package is private, configure EasyPanel with a GitHub token that has package read access; public packages require no registry credentials.
+
 ## License
 
 Original application code is released under the [MIT License](LICENSE). **The anatomy data has its own CC BY 4.0 license**; preserve the attribution when redistributing it. Third-party dependencies retain their respective licenses.
