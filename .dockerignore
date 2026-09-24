@@ -1,0 +1,12 @@
+.git
+.github
+node_modules
+dist
+.vercel
+.wrangler
+outputs
+work
+*.tsbuildinfo
+.env*
+README.md
+docs
